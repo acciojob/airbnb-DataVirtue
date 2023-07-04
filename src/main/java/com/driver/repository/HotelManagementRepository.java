@@ -7,6 +7,7 @@ import com.driver.model.Hotel;
 import com.driver.model.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +48,7 @@ public class HotelManagementRepository {
 
     public List<Hotel> getAllHotels() {
 
-        return (List<Hotel>) hotelDb.values();
+        return new ArrayList<>(hotelDb.values());
     }
 
     public Integer bookARoom(Booking booking) {
